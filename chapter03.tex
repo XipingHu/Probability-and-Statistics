@@ -1,0 +1,55 @@
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:
+
+\section{统计量的分布}
+
+\subsection{统计量}
+
+\paragraph{均值}
+$\bar{X} = \dfrac{1}{n} \sum\limits_{i=1}^{n} X_{i}$
+
+
+
+\paragraph{方差}
+$S^{2} = \dfrac{1}{n-1} \sum\limits_{i=1}^{n} \left( X_{i} - \bar{X} \right)^{2}$
+
+\paragraph{$k$阶原点矩}
+$A_{k} = \dfrac{1}{n} \sum\limits_{i=1}^{n} X_{i}^{k}$
+
+\paragraph{$k$阶中心距}
+$B_{k} = \dfrac{1}{n} \sum\limits_{i=1}^{n} \left( X_{i} - \bar{X} \right)^{2}$
+
+\subsection{分布}
+
+\paragraph{$\chi^2$分布}
+
+$X_{n} \sim N \left( 0,1 \right)$，$X_{1} + \cdots + X_{n}$满足自由度为$n$的$\chi^{2}$分布，该分布具有可加性。
+
+\paragraph{$t$分布}
+
+$X_{n} \sim N \left( 0,1 \right)$，$Y \sim \chi^{2} (n)$，则$T=\dfrac{X}{\sqrt{Y/n}} \sim t(n)$
+
+\paragraph{$F$分布}
+
+$X \sim \chi^{2} (n_{1})$，$Y \sim \chi^{2} (n_{2})$，则$F=\dfrac{X/n_{1}}{Y/n_{2}} \sim F \left( n_{1},n_{2} \right)$
+
+
+\subsubsection{正态总体样本均值与方差满足的分布}
+\label{sec:790103959290}
+\paragraph{均值}
+$\bar{X} \sim N \left( \mu, \dfrac{\sigma^{2}}{n} \right)$
+
+\paragraph{推论1}
+$\dfrac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1)$
+
+\paragraph{推论2}
+$\dfrac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim t(n-1)$
+
+\paragraph{方差}
+$\dfrac{\sum\limits_{i=1}^{n} \left( X_{i} - \bar{X} \right)^{2}}{\sigma^{2}} = (n-1) \dfrac{S^{2}}{\sigma^{2}} \sim \chi^{2} (n-1)$
+
+
+

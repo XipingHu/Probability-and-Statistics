@@ -1,0 +1,108 @@
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:
+
+\section{数字特征}
+
+\subsection{数学期望与方差}
+
+\subsubsection{离散型}
+
+
+\begin{equation*}
+  EX=\sum\limits_{i=1}^{\infty} x_{i} p_{i}
+\end{equation*}
+\begin{equation*}
+  DX=E(X-EX)^{2}=EX^{2}-E(X^{2})
+\end{equation*}
+
+\subsubsection{连续型}
+\begin{equation*}
+  EX=\int_{-\infty}^{+\infty} x f(x) \mathrm{d} x
+\end{equation*}
+\begin{equation*}
+  DX=\int_{-\infty}^{+\infty} (x-EX)^{2} f(x) \mathrm{d} x
+\end{equation*}
+
+
+
+\subsection{不同分布的数学期望与方差}
+
+\subsubsection{ 离散型}
+
+
+\begin{table}[H]
+  \renewcommand\arraystretch{1.5}
+  \begin{tabular}{|l|l|l|}
+    \hline
+    $X$&$EX$&$DX$\\
+    \hline
+    $B(n,p)$&$np$&$np(1-p)$\\
+    \hline
+    $P(\lambda)$&$\lambda$&$\lambda$\\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsubsection{连续型}
+
+\begin{table}[H]
+  \renewcommand\arraystretch{2}
+  \begin{tabular}{|l|l|l|}
+    \hline
+    $X$&$EX$&$DX$\\
+    \hline
+    $N(\mu,\sigma^{2})$&$\mu$&$\sigma^{2}$\\
+    \hline
+    $E(\lambda)$&$\dfrac{1}{\lambda}$&$\dfrac{1}{\lambda^{2}}$\\
+    \hline
+    $U(a,b)$&$\dfrac{b-a}{2}$&$\dfrac{(b-a)^{2}}{12}$\\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{切比雪夫不等式}
+
+\begin{equation*}
+  P \left( |X-EX| \geq \epsilon \right) \leq \dfrac{DX}{\epsilon^{2}}
+\end{equation*}
+
+\subsection{协方差}
+
+\begin{equation*}
+  Cov(X,Y)=E \left[ \left( X-EX \right) \left( Y-EY \right) \right] = E \left( XY \right) -EXEY
+\end{equation*}
+协方差的性质有
+\begin{equation*}
+  Cov(aX,bY)=ab Cov(X,Y)
+\end{equation*}
+\begin{equation*}
+  Cov(X_{1}+X_{2} ,Y) = Cov(X_{1},Y) + Cov(X_{2},Y)
+\end{equation*}
+特别地
+\begin{equation*}
+  DX=Cov(X,X)
+\end{equation*}
+
+\subsection{相关系数}
+
+\begin{equation*}
+  \rho_{xy} = \dfrac{Cov(X,Y)}{\sqrt{DX} \sqrt{DY}}
+\end{equation*}
+
+\subsection{矩}
+
+\paragraph{$k$阶原点矩}
+$\nu_{k}=EX^{k}$
+
+\paragraph{$k$阶原点绝对矩}
+$\alpha_{k}=E|X|^{k}$
+
+\paragraph{$k$阶中心矩}
+$\mu_{k}=E(X-EX)^{k}$
+
+\paragraph{$k$阶原点绝对矩}
+$\beta_{k}=E|X-EX|^{k}$
+

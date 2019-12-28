@@ -1,0 +1,60 @@
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:
+\section{参数估计}
+
+\subsection{矩估计}
+
+\begin{itemize}
+\item 求$EX$与$EX^{2}$
+\item $A_{1} = \dfrac{1}{n} \sum\limits_{i=1}^{n} X_{i} = \bar{X}$
+\item $A_{2} = \dfrac{1}{n} \sum\limits_{i=1}^{n} X_{i}^{2}$
+\item $A_{2} - A_{1}^{2} = \dfrac{1}{n} \sum\limits_{i=1}^{n} X_{i}^{2} - \bar{X}^{2} = \dfrac{1}{n} \sum\limits_{i=1}^{n} \left( X_{i}-\bar{X} \right)^{2} = \tilde{S}^{2}$
+\item 用上面的式子解出分布中的参数，消去$A_{1}$和$A_{2}$
+\end{itemize}
+例子详见p101
+
+\subsection{极大似然估计}
+
+\begin{itemize}
+\item 根据概率密度用连乘的形式写出似然方程
+\item 对似然方程取对数，求导判断参数取什么值的时候，似然函数最大
+\item 如果参数取多个值的时候似然函数都能最大，则取最大值作为极大似然估计
+  
+\end{itemize}
+详见p103
+
+\subsection{无偏估计}
+
+$S^{2}=\dfrac{1}{n-1} \sum\limits_{i=1}^{n} \left( X_{i} - \bar{X} \right)^{2}$是$\sigma^{2}$的无偏估计，$\tilde{S}^{2}=\dfrac{1}{n} \sum\limits_{i=1}^{n} \left( X_{i} - \bar{X} \right)^{2}$是$\sigma^{2}$的有偏估计
+
+\subsection{区间估计（置信水平$1-\alpha$）}
+
+\subsubsection{均值$\mu$的区间估计}
+
+
+\paragraph{已知$\sigma^2$，由章节\ref{sec:790103959290}，推论1：}
+
+$\left( \bar{X} - \dfrac{\sigma}{\sqrt{n}} u_{\alpha/2}, \bar{X} + \dfrac{\sigma}{\sqrt{n}} u_{\alpha/2} \right)$
+
+\paragraph{未知$\sigma^2$，由章节\ref{sec:790103959290}，推论2：}
+
+$\left( \bar{X} - \dfrac{S}{\sqrt{n}} u_{\alpha/2}, \bar{X} + \dfrac{S}{\sqrt{n}} u_{\alpha/2} \right)$
+
+\subsubsection{方差$\sigma$的区间估计}
+
+\paragraph{未知$\mu$，由章节\ref{sec:790103959290}，方差满足的分布：}
+
+$\left( \dfrac{\sqrt{n-1}S}{\sqrt{\chi^{2}_{\alpha/2} (n-1)}},\dfrac{\sqrt{n-1}S}{\sqrt{\chi^{2}_{1-\alpha/2} (n-1)}} \right)$
+
+\subsubsection{单侧置信区间}
+
+\paragraph{单侧置信下限$\underline{\theta}$}
+
+$P(\theta > \underline{\theta}) = 1 - \alpha$
+
+\paragraph{单侧置信上限$\overline{\theta}$}
+
+$P(\theta < \overline{\theta}) = 1 - \alpha$
